@@ -2,9 +2,11 @@
     $request_method = $_SERVER['REQUEST_METHOD'];
     $is_submit = isset($_POST['submit']);
     if ($request_method != 'POST' || !$is_submit) {
-        echo 'Needs to be both a POST and a submit action.';
-        echo "Request method: $request_method";
-        echo "Is submit: $is_submit";
+        echo 'Needs to be both a POST and a submit action.<br>';
+        // Fixes XSS issue
+        echo htmlspecialchars("Request method: $request_method",  ENT_QUOTES, 'UTF-8');
+        echo "<br>";
+        echo htmlspecialchars("Is submit: $is_submit",  ENT_QUOTES, 'UTF-8');
         return;
     }
 

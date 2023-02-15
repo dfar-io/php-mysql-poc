@@ -5,7 +5,7 @@ POC for PHP/MySQL
 
 1. Create codespace.
 2. Connect to the `mariadb` database using MySQL Workbench, HeidiSQL or another MySQL client (username and password are both `mariadb`).
-3. Create a  table with the following query:
+3. Create a table with the following query:
 ```
 CREATE TABLE `mariadb`.`registrations` (
   `id` INT NOT NULL AUTO_INCREMENT,
